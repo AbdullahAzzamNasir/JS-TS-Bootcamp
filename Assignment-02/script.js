@@ -48,10 +48,9 @@ document.getElementById("findPositive").addEventListener("click",function(){
 
 
 // Q6 Reverse a String Problem: Write a function reverseString(str) that returns the reverse of the given string.
-function reverseString(str){
-    return str.split("").reverse().join("");
+function reverseString(){
+     let string = document.getElementById("string").value;
+     let reverseString = string.split("").reverse().join("");
+     document.getElementById("q6").innerHTML = `The Reverse String is : ${reverseString}`  
+    
 }
-document.getElementById("reverseString").addEventListener("click",function(){
-    let string = document.getElementById("string").value;
-    document.getElementById("q6").innerHTML = `The Reverse String is : ${reverseString(string)}`  
-})
