@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS PROBLEM SOLVING 04</title>
+    <style>
+      .row {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .row .col {
+        width: 33.33%;
+        padding: 0 10px;
+      }
+      .row .col:nth-child(2) {
+        border-left: 1px solid;
+        border-right: 1px solid;
+      }
+      p {
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Problem Solving Exercise 04</h1>
+
+    <div>
+      <h1>
+        Q1) Variables & Data Types What is the difference between var, let, and
+        const?
+      </h1>
+      <div class="row">
+        <div class="col">
+          <div class="var">
+            <h2>var</h2>
+            <p>
+              var is used for initialize the values. var is a global scope
+              variable. which mean we can assignment this data type any where in
+              our code.<br />
+              We will console the var variable before it initialize so it will
+              allow in JS only for this variable.<br />
+              We will initialize this variable first in start of the code and
+              then between the code we assign the value to the var variable so
+              it is allowed.<br />
+              First we initialize and assign the value and later we want to
+              change the value of that var variable it is allowed.<br />
+            </p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="let">
+            <h2>let</h2>
+            <p>
+              let is used for initialize the values too. let is a block scope
+              variable. which mean we can not assignment this data type any
+              where in our code. In simple way if we initialize this variable in
+              the parenthesis of function so we access only in that function. If
+              we want to access outside the function so JS will throw an
+              error.<br />
+              We cannot console the let variable before it initialize. <br />
+              But We will initialize this variable first in start of the code
+              and then between the code we assign the value to the let variable
+              so it is allowed.<br />
+              First we initialize and assign the value and later we want to
+              change the value of that let variable it is not allowed.<br />
+            </p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="const">
+            <h2>const</h2>
+            <p>
+              const is used for initialize the values too. const is a block
+              scope variable. which mean we can not assignment this data type
+              any where in our code. In simple way if we initialize this
+              variable in the parenthesis of function so we access only in that
+              function. If we want to access outside the function so JS will
+              throw an error.<br />
+              let and const both are same. But difference between let and const
+              in initialization We cannot console the const variable before it
+              initialize.<br />
+              Also we cannot initialize const variable first and then assign the
+              value it is not allowed. We have to initialize and assign the
+              value at the same time.<br />
+              First we initialize and assign the value and later we want to
+              change the value of that const variable it is not allowed.<br />
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <br />
+
+    <div>
+      <h1>
+        Q2) What are the basic data types in JavaScript? (e.g., string, number,
+        boolean) Give examples.
+      </h1>
+      <div>
+        <h2>1) String</h2>
+        <p>var myName = "Abdullah";</p>
+        <p>
+          In string data type we define our content or any other name. We cannot
+          define any number, boolean
+        </p>
+        <p>Define string variable we need to add quote ""</p>
+      </div>
+      <div>
+        <h2>2) Number</h2>
+        <p>var myClass = 08;</p>
+        <p>
+          In number data type we only assign numeric values and we dont need any
+          quote ""
+        </p>
+      </div>
+      <div>
+        <h2>3) Boolean</h2>
+        <p>var iAmBoy = true;</p>
+        <p>
+          In boolean data type we only assign true and false values and we dont
+          need any quote ""
+        </p>
+      </div>
+      <div>
+        <h2>4) Bigint</h2>
+        <p>var x = BigInt(9232281881888);</p>
+        <p>
+          In Bigint data type we only assign large number of numeric data
+          because it use less memory space.
+        </p>
+      </div>
+      <div>
+        <h2>5) Undefined</h2>
+        <p>var y;</p>
+        <p>
+          In Undefined data type we only declare variable. we dont initialize
+          any value in it.
+        </p>
+      </div>
+      <div>
+        <h2>6) Null</h2>
+        <p>var a = null;</p>
+        <p>
+          In Null data type is same undefined data type. if we check type of
+          null it return Object
+        </p>
+      </div>
+    </div>
+    <br />
+    <div>
+      <h1>Q3) How do you check if a variable is undefined?</h1>
+      <p>By using typeof() we check the variable is undefined or not.</p>
+    </div>
+    <br />
+
+    <div>
+      <h1>Q4) Operators What is the difference between == and ===?</h1>
+      <div>
+          <h2>== Operator</h2>
+          <p>
+              In JS == opertor used for comparing 2 values and then return answer in true and false as boolean.
+              It is known as Equality Operator. In this operator JS will check both the values are same or not.
+          </p>
+          <p>
+              if we compare number value with string so JS will first convert string to number and the compare the value and it didn't check it data type.
+          </p>
+          <p>
+              if we compare boolean with number 1 mean (true == 1). So this operator will convert the 1 in true value and the compare both the values.
+          </p>
+      </div>
+      
+      <div>
+          <h2>=== Operator</h2>
+          <p>
+              In JS === opertor used for comparing 2 values and their type too and then return answer in true and false as boolean. In this operator type check is important.
+              It is known as Strict Equality Operator. In this operator JS will check both the values and types are same or not.
+          </p>
+          <p>
+              if we compare number value with string so JS will compare both the values and their type too. If both are same so it will return true. If any of them are different so it will return false.
+          </p>
+      </div>
+  </div>
+
+  <br/>
+  <div>
+      <h1>Q5) How do increment (++) and decrement (--) operators work?</h1>
+      <div>
+          <h2>Increment Operator</h2>
+          <p>
+              Working of Increment Operator in JS is to add +1 in original value.<br/>
+              Two type Increment Operators<br/>
+              1) Prefix<br/>
+              2) Postfix.
+          </p>
+          <div>
+              <h3>Prefix</h3>
+          <p>Prefix Operator define as ++x. It mean in prefix ++ sign place before the variable.</p>
+          <p>It will work same as its sign placement. Mean it will add +1 in original value before the variable being used in code.</p>
+          <p>Example if x = 5; and it print like console.log(++x);</p>
+          <p> it output become 6 why because before print the result Prefix add +1 in original value and then print the updated value.</p>
+          </div>
+  
+          <div>
+              <h3>Postfix</h3>
+          <p>Postfix Operator define as x++. It mean in Postfix -- sign place after the variable.</p>
+          <p>It will work same as its sign placement. Mean it will add +1 in original value after the variable being used in code.</p>
+          <p>Example if x = 5; and it print like console.log(x++);</p>
+          <p> it output become 5. Because it will print the value first and then add +1 in original value but use will we will use original value which is defined at start of program.</p>
+          </div>
+      </div>
+
+      <div>
+          <h2>Decrement Operator</h2>
+          <p>
+              Working of Decrement Operator in JS is to subtract -1 in original value.<br/>
+              Two type Decrement Operators<br/>
+              1) Prefix<br/>
+              2) Postfix.
+          </p>
+          <div>
+              <h3>Prefix</h3>
+          <p>Prefix Operator define as --x. It mean in prefix -- sign place before the variable.</p>
+          <p>It will work same as its sign placement. Mean it will subtract -1 from original value before the variable being used in code.</p>
+          <p>Example if x = 5; and it print like console.log(--x);</p>
+          <p> it output become 4 why because before print the result Prefix subtract -1 from original value and then print the updated value.</p>
+          </div>
+  
+          <div>
+              <h3>Postfix</h3>
+          <p>Postfix Operator define as x--. It mean in Postfix -- sign place after the variable.</p>
+          <p>It will work same as its sign placement. Mean it will subtract -1 in original value after the variable being used in code.</p>
+          <p>Example if x = 5; and it print like console.log(x--);</p>
+          <p> it output become 5. Because it will print the value first and then subtract -1 from original value but we will use original value which is defined at start of program.</p>
+          </div>
+      </div>
+  </div>
+
+  <br/>
+
+
+  <div>
+      <h1>Q6) Functions Write a function that adds two numbers.</h1>
+      <div>
+          <div>
+              <label>First Number: </label>
+              <input type="number" name="fnumber" id="fnumber"/>
+          </div>
+          <div>
+              <label>Second Number: </label>
+              <input type="number" name="snumber" id="snumber"/>
+          </div>
+          <button id="calculate" onclick="addNumber()">Calculate Sum</div>
+          <p id="numSum"> 
+
+          </p>
+      </div>
+  </div>
+
+  <br/>
+
+  <div>
+      <h1>Q7) What are parameters and return values in functions?</h1>
+      <p>
+          Parameters are used in function like function myName(x). So, x is the parameter. Parameter take the input from outside the function. Mean take the value which is define  as function argument. it define like myName("Abdullah"). We also pass the actual value in Parameters if we dont want to pass the arguments.
+      </p>
+      <p>
+          return values in function means it send back the output which function calculate the result. This return the result to that function which is called outside the function with argument.
+      </p>
+      <p>
+          Example:<br/>
+          function addNum(a,b){<br/> <!-- a,b called Parameter -->
+              return a + b;<br/> <!-- return result of calculation -->
+          }<br/>
+          addNum(2,3);<!-- 2,3 called Argument -->
+      </p>
+  </div>
+    
+    <br/>
+
+    <div>
+      <h1>Q8) Write an example of an arrow function.</h1>
+      <p>
+        const myName = () => {<br />
+        console.log("ABDULLAH")<br />
+        }
+      </p>
+    </div>
+
+    <br />
+
+    <div>
+      <h1>
+        Q9) DOM (Document Object Model) What does document.getElementById() do?
+      </h1>
+      <p>
+        By using document.getElementById() we get the element of HTML element by
+        using the reference of HTML element id.
+      </p>
+    </div>
+
+    <br />
+
+    <div>
+      <h1>
+        Q10) How do you show an alert when a button is clicked using JavaScript?
+      </h1>
+      <div>
+        <button onclick="alert('Hello I am an Alert.')">
+          click here to see the alert
+        </button>
+      </div>
+    </div>
+
+    <br />
+
+    <div>
+      <h1>
+        Q11) Objects Create an object with name, age, and city properties.
+      </h1>
+      <p>let myInfo = { name: 'Abdullah', age: 25, city: 'Karachi' }</p>
+    </div>
+    <br />
+
+    <div>
+      <h1>Q12) How do you access a specific value from an object?</h1>
+      <p>let myInfo = { name: 'Abdullah', age: 25, city: 'Karachi' }</p>
+      <p>like I create this object so if  we want to access specific value of this object so we have to do a console like that</p>
+      <p>console.log(myInfo.name);</p>
+      <p>console.log(myInfo.age);</p>
+      <p>console.log(myInfo.city);</p>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
